@@ -35,7 +35,7 @@ function renderLocalStorage() {
 async function render(data){
     for (let i = 0; i < data.length; i++){
         const singleMovie = data[i];
-        const res = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=602ff4b1&t=${singleMovie}&r=json&plot=full`);
+        const res = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=602ff4b1&t=${singleMovie}&r=json&plot=full`);
         const data2 = await res.json();
 
 

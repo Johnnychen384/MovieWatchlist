@@ -30,11 +30,11 @@ async function searchMovies() {
             movieList.removeChild(movieList.firstChild)
         }
         
-        const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=602ff4b1&s=${whatIsSearched}&r=json&plot=full`);
+        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=602ff4b1&s=${whatIsSearched}&r=json&plot=full`);
         const data = await response.json();
         render(data);
     } else if(whatIsSearched.length >= 3 && movieList.childElementCount < 10){
-        const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=602ff4b1&s=${whatIsSearched}&r=json&plot=full`);
+        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=602ff4b1&s=${whatIsSearched}&r=json&plot=full`);
         const data = await response.json();
         render(data);
     } else {
@@ -49,7 +49,7 @@ async function searchMovies() {
 async function render(data){
     for (let i = 0; i < 10; i++){
         const singleMovie = data.Search[i].Title;
-        const res = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=602ff4b1&t=${singleMovie}&r=json&plot=full`);
+        const res = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=602ff4b1&t=${singleMovie}&r=json&plot=full`);
         const data2 = await res.json();
 
 
